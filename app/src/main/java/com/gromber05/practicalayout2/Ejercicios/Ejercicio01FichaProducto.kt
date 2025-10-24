@@ -25,9 +25,8 @@ fun FichaProducto(modifier: Modifier = Modifier) {
     Surface(
         modifier = modifier
     ) {
-        val context = LocalContext.current
-        val title: String = ""
-        val price: String = ""
+        val title = ""
+        val price = ""
         val imageRes: Int = R.drawable.ic_launcher_foreground
         val onBuyClick: () -> Unit = {}
 
@@ -77,13 +76,12 @@ fun FichaProducto(modifier: Modifier = Modifier) {
 
                 val endBarrier = createEndBarrier(titleRef, priceRef)
 
-                val gap = 8.dp
                 Button(
                     onClick = onBuyClick,
                     modifier = Modifier.constrainAs(buyRef) {
                         start.linkTo(
                             endBarrier,
-                            margin = gap
+                            margin = 8.dp
                         )
                         top.linkTo(titleRef.top)
                         end.linkTo(parent.end, margin = 30.dp)
