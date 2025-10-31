@@ -1,6 +1,5 @@
 package com.gromber05.practicalayout2.Ejercicios
 
-import android.widget.Toast
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
@@ -12,7 +11,6 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.ChainStyle
@@ -21,7 +19,6 @@ import androidx.constraintlayout.compose.Dimension
 
 @Composable
 fun AccionesPrincipales(modifier: Modifier = Modifier) {
-    val context = LocalContext.current
     var chainStyle by remember { mutableStateOf(ChainStyle.Spread) }
 
     ConstraintLayout(
@@ -65,7 +62,6 @@ fun AccionesPrincipales(modifier: Modifier = Modifier) {
 
         Button(
             onClick = {
-                Toast.makeText(context, "Spread", Toast.LENGTH_SHORT).show()
                 chainStyle = ChainStyle.Spread
             },
             modifier = Modifier.constrainAs(b1Ref) {
@@ -75,7 +71,6 @@ fun AccionesPrincipales(modifier: Modifier = Modifier) {
 
         Button(
             onClick = {
-                Toast.makeText(context, "SpreadInside", Toast.LENGTH_SHORT).show()
                 chainStyle = ChainStyle.SpreadInside
             },
             modifier = Modifier.constrainAs(b2Ref) {
@@ -85,7 +80,6 @@ fun AccionesPrincipales(modifier: Modifier = Modifier) {
 
         Button(
             onClick = {
-                Toast.makeText(context, "Packed", Toast.LENGTH_SHORT).show()
                 chainStyle = ChainStyle.Packed
             },
             modifier = Modifier.constrainAs(b3Ref) {

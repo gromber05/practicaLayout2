@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.NavigationBar
@@ -53,8 +54,8 @@ fun AppPrincipal() {
     Scaffold(
         topBar = {
             TopAppBar(title = {
-                Text("PracticaEstados - Gonzalo Romero Bernal")
-            })
+                Text("PracticaEstados - Gonzalo Romero Bernal", fontSize = 18.sp)
+            }, modifier = Modifier.fillMaxWidth())
 
         },
         bottomBar = {
