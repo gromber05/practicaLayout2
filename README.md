@@ -52,8 +52,7 @@ https://github.com/gromber05/practicaLayout2/blob/0027e279e7cace8fc7c202719c8e84
 
 
 **Código:**
-
-
+https://github.com/gromber05/practicaLayout2/blob/0027e279e7cace8fc7c202719c8e84ce04b80fb2/app/src/main/java/com/gromber05/practicalayout2/Ejercicios/Ejercicio03ColoresEstado.kt#L25-L62
 
 ---
 
@@ -65,6 +64,7 @@ https://github.com/gromber05/practicaLayout2/blob/0027e279e7cace8fc7c202719c8e84
 
 
 **Código:**
+https://github.com/gromber05/practicaLayout2/blob/0027e279e7cace8fc7c202719c8e84ce04b80fb2/app/src/main/java/com/gromber05/practicalayout2/Ejercicios/Ejercicio04ContadorDoble.kt#L20-L39
 
 ---
 
@@ -76,6 +76,7 @@ https://github.com/gromber05/practicaLayout2/blob/0027e279e7cace8fc7c202719c8e84
 
 
 **Código:**
+https://github.com/gromber05/practicaLayout2/blob/0027e279e7cace8fc7c202719c8e84ce04b80fb2/app/src/main/java/com/gromber05/practicalayout2/Ejercicios/Ejercicio05Visibilidad.kt#L19-L36
 
 ---
 
@@ -86,4 +87,6 @@ https://github.com/gromber05/practicaLayout2/blob/0027e279e7cace8fc7c202719c8e84
 **Foto:**
 
 **Código:**
+https://github.com/gromber05/practicaLayout2/blob/0027e279e7cace8fc7c202719c8e84ce04b80fb2/app/src/main/java/com/gromber05/practicalayout2/Ejercicios/EjercicioExtra/Main.kt#L12-L25
 
+https://github.com/gromber05/practicaLayout2/blob/0027e279e7cace8fc7c202719c8e84ce04b80fb2/app/src/main/java/com/gromber05/practicalayout2/Ejercicios/EjercicioExtra/components/EventCard.kt#L26-L208
