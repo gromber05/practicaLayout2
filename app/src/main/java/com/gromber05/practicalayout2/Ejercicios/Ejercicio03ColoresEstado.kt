@@ -23,8 +23,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.*
 
 private val ColorSaver = Saver<Color, Long>(
-    save = { it.value.toLong() },          // guardo el ULong del color
-    restore = { Color(it) }       // restauro a Color
+    save = { it.value.toLong() },
+    restore = { Color(it) }
 )
 
 @Composable

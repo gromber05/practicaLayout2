@@ -12,12 +12,6 @@ import androidx.constraintlayout.compose.ChainStyle
 import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.constraintlayout.compose.Dimension
 
-/**
- * Fila de acciones “Interesa”, “Compartir”, “Guardar” en texto.
- * - Distribución mediante CHAIN horizontal.
- * - ChainStyle elegido: SpreadInside (equilibrado en móviles).
- * - Se ajusta el bias de "Compartir" para un balance visual sutil.
- */
 @Composable
 fun EventActions(
     onInteresa: () -> Unit,
@@ -32,7 +26,6 @@ fun EventActions(
     ) {
         val (aInteresa, aCompartir, aGuardar) = createRefs()
 
-        // Construimos la cadena horizontal
         createHorizontalChain(aInteresa, aCompartir, aGuardar, chainStyle = ChainStyle.SpreadInside)
 
         Text(
@@ -43,7 +36,6 @@ fun EventActions(
                     start.linkTo(parent.start)
                     end.linkTo(aCompartir.start)
                     width = Dimension.wrapContent
-                    // bias por defecto 0.5 (centrado entre anclas)
                 }
                 .clickable(onClick = onInteresa)
                 .padding(8.dp)
@@ -57,7 +49,6 @@ fun EventActions(
                     start.linkTo(aInteresa.end)
                     end.linkTo(aGuardar.start)
                     width = Dimension.wrapContent
-                    // Ajuste sutil de bias para “descargar” un poco hacia la izquierda
                     horizontalBias = 0.47f
                 }
                 .clickable(onClick = onCompartir)
