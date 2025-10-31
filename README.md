@@ -26,7 +26,7 @@
 ## Ejercicio 1 — Ficha de producto
 **Explicación:** He realizado una tarjeta de presentación de un producto, en la que he integrado una imagen recortada con textos superpuestos, en los que he empleado una disposición por capas mediante el uso de Box.
 
-**Foto:**
+**Foto:**![1](images/1.jpg)
 
 **Código:**
 https://github.com/gromber05/practicaLayout2/blob/0027e279e7cace8fc7c202719c8e84ce04b80fb2/app/src/main/java/com/gromber05/practicalayout2/Ejercicios/Ejercicio01FichaProducto.kt#L23-L94
@@ -37,7 +37,7 @@ https://github.com/gromber05/practicaLayout2/blob/0027e279e7cace8fc7c202719c8e84
 
 **Explicación:**  Para este ejercicio, lo que he realizado ha sido una barra de acciones que contiene tres botones que se han distribuido mediante ConstraintLayout y una cadena horizontal. Se ha pedido que se apliquen diferentes estilos de cadena entre los que se encuentran: Spread, SpredInside y Packed. Cada botón provoca que aparezca un Toast de distintas duraciones
 
-**Foto**:
+**Foto**:![2](images/2.jpg)
 
 **Código:**
 https://github.com/gromber05/practicaLayout2/blob/0027e279e7cace8fc7c202719c8e84ce04b80fb2/app/src/main/java/com/gromber05/practicalayout2/Ejercicios/Ejercicio02AccionesPrincipales.kt#L19-L54
@@ -48,7 +48,7 @@ https://github.com/gromber05/practicaLayout2/blob/0027e279e7cace8fc7c202719c8e84
 
 **Explicación:** En este ejercicio se ha implementado un ejemplo de gestión de estado en Compose, donde mostramos un cubo en pantalla que cambia de color aleatoriamente al pulsar un botón. Se usa rememberSaveable junto con ColorSaver para poder almacenar el valor de color actual en conjunto con su nombre incluso tras recomponer el contenido. 
 
-**Foto:**
+**Foto:**![3](images/3.jpg)
 
 **Código:**
 https://github.com/gromber05/practicaLayout2/blob/0027e279e7cace8fc7c202719c8e84ce04b80fb2/app/src/main/java/com/gromber05/practicalayout2/Ejercicios/Ejercicio03ColoresEstado.kt#L25-L62
@@ -59,7 +59,7 @@ https://github.com/gromber05/practicaLayout2/blob/0027e279e7cace8fc7c202719c8e84
 
 **Explicación:** En este ejercicio, hemos comprobado como funciona el estado y la persistencia de rememberSaveable en JetpackCompose. Esta pantalla muestra dos botones, uno para sumar y otro para restar a una variable que funciona de contador. También hemos puesto una regla al contador que hace que no recoja numeros negativos.
 
-**Foto:**
+**Foto:**![4](images/4.jpg)
 
 **Código:**
 https://github.com/gromber05/practicaLayout2/blob/0027e279e7cace8fc7c202719c8e84ce04b80fb2/app/src/main/java/com/gromber05/practicalayout2/Ejercicios/Ejercicio04ContadorDoble.kt#L20-L39
@@ -70,7 +70,7 @@ https://github.com/gromber05/practicaLayout2/blob/0027e279e7cace8fc7c202719c8e84
 
 **Explicación:** En este ejercicio, he desarollado un componente interactivo que permite ocultar o mostrar un texto presionando un botón. He creado una variable de estado con rememberSaveable para garantizar que el valor del estado no se pierda despues de una recomposición.
 
-**Foto:**
+**Foto:**![5](images/5.jpg)
 
 **Código:**
 https://github.com/gromber05/practicaLayout2/blob/0027e279e7cace8fc7c202719c8e84ce04b80fb2/app/src/main/java/com/gromber05/practicalayout2/Ejercicios/Ejercicio05Visibilidad.kt#L19-L36
@@ -83,7 +83,7 @@ https://github.com/gromber05/practicaLayout2/blob/0027e279e7cace8fc7c202719c8e84
 Estoy usando ConstraintLayout con una cadena horizontal SpreadInside, de esta manera, puedo distribuir los tres textos con espacio suficiente en los extremos.
 EventCard es el componente principal y el interactivo. En este se muestra una imagen mediante el método AsyncImage de Coil y posee titulos y subtitulos superpuestos con fondos semitransparentes para que sea legible. Debajo, la descripción se puede expandir o contraer con el texto "Mostrar más/menos" y luego se inserta la fila con las interacciones del archivo EventActions. Todo el diseño se organiza con ConstraintLayout usando barreras y restricciones.
 
-**Foto:**
+**Foto:**![6](images/6.jpg)
 
 **Código:**
 https://github.com/gromber05/practicaLayout2/blob/0027e279e7cace8fc7c202719c8e84ce04b80fb2/app/src/main/java/com/gromber05/practicalayout2/Ejercicios/EjercicioExtra/Main.kt#L12-L25

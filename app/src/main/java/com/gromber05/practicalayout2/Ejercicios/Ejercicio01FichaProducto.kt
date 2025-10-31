@@ -19,15 +19,16 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.ConstraintLayout
+import androidx.constraintlayout.compose.Dimension
 
 @Composable
 fun FichaProducto(modifier: Modifier = Modifier) {
     Surface(
         modifier = modifier
     ) {
-        val title = ""
-        val price = ""
-        val imageRes: Int = R.drawable.ic_launcher_foreground
+        val title = "Fresones de Huelva"
+        val price = "7.99"
+        val imageRes: Int = R.drawable.fresones
         val onBuyClick: () -> Unit = {}
 
         Card(modifier = modifier.fillMaxWidth()) {
@@ -58,7 +59,7 @@ fun FichaProducto(modifier: Modifier = Modifier) {
                     modifier = Modifier.constrainAs(titleRef) {
                         start.linkTo(imgRef.end, margin = 12.dp)
                         top.linkTo(parent.top)
-                        end.linkTo(parent.end)
+                        end.linkTo(buyRef.start, margin = 12.dp)
                         width = androidx.constraintlayout.compose.Dimension.preferredWrapContent
                     }
                 )
@@ -69,8 +70,8 @@ fun FichaProducto(modifier: Modifier = Modifier) {
                     modifier = Modifier.constrainAs(priceRef) {
                         start.linkTo(titleRef.start)
                         top.linkTo(titleRef.bottom, margin = 6.dp)
-                        end.linkTo(parent.end)
-                        width = androidx.constraintlayout.compose.Dimension.preferredWrapContent
+                        end.linkTo(buyRef.start)
+                        width = Dimension.wrapContent
                     }
                 )
 
@@ -84,7 +85,7 @@ fun FichaProducto(modifier: Modifier = Modifier) {
                             margin = 8.dp
                         )
                         top.linkTo(titleRef.top)
-                        end.linkTo(parent.end, margin = 30.dp)
+                        end.linkTo(parent.end, margin = 10.dp)
                     }
                 ) { Text("Comprar") }
             }

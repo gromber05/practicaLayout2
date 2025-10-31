@@ -1,6 +1,7 @@
 package com.gromber05.practicalayout2.Ejercicios.EjercicioExtra.components
 
 import android.content.res.Configuration.UI_MODE_NIGHT_YES
+import android.widget.Toast
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -16,6 +17,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -34,6 +36,7 @@ fun EventCard(
     var interestedCount by rememberSaveable { mutableStateOf(23) }
     var isExpanded by rememberSaveable { mutableStateOf(false) }
     var isInterested by rememberSaveable { mutableStateOf(false) }
+    val ctx = LocalContext.current
 
     Card(
         modifier = modifier
@@ -132,11 +135,14 @@ fun EventCard(
                     end.linkTo(parent.end)
                     width = Dimension.fillToConstraints
                 },
-                onInteresa = { isInterested = !isInterested },
+                onInteresa = {
+                    isInterested = !isInterested
+                    Toast.makeText(ctx, "Te has interesado por la publicación", Toast.LENGTH_SHORT).show()
+                             },
                 onCompartir = {
-
+                    Toast.makeText(ctx, "Se ha compartido la publicación", Toast.LENGTH_SHORT).show()
                 },
-                onGuardar = { /*Tengo que colocar aquí lo que va a realizar cuando se le de a guardar*/ }
+                onGuardar = { Toast.makeText(ctx, "Se ha guardado la publicación", Toast.LENGTH_SHORT).show() }
             )
             val textEndBarrier = createEndBarrier(titleRef, subtitleRef, descRef)
             Text(

@@ -119,7 +119,7 @@ fun AppPrincipal() {
                 2 -> ColoresEstado()
                 3 -> ContadorDoble()
                 4 -> InterruptorVisibilidad()
-                6 -> MainEjercicioExtra()
+                5 -> MainEjercicioExtra()
             }
         }
     }
