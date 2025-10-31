@@ -1,72 +1,104 @@
 package com.gromber05.practicalayout2.Ejercicios
 
-
 import android.widget.Toast
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.*
+import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.ChainStyle
 import androidx.constraintlayout.compose.ConstraintLayout
+import androidx.constraintlayout.compose.Dimension
 
 @Composable
-fun AccionesPrincipales(modifier: Modifier = Modifier, chainStyle: ChainStyle) {
+fun AccionesPrincipales(modifier: Modifier = Modifier) {
+    val context = LocalContext.current
+    var chainStyle by remember { mutableStateOf(ChainStyle.Spread) }
+
     ConstraintLayout(
-        modifier = modifier.padding(10.dp).fillMaxWidth().height(50.dp)
+        modifier = modifier
+            .fillMaxSize()
+            .padding(10.dp)
     ) {
-        val (buttonARef, buttonBRef, buttonCRef) = createRefs()
-        val context = LocalContext.current
+        val (dividerRef, t1Ref, t2Ref, t3Ref, b1Ref, b2Ref, b3Ref) = createRefs()
 
-        Button(
-            onClick = { Toast.makeText(context, "1", Toast.LENGTH_SHORT).show() },
-            modifier = Modifier.constrainAs(buttonARef) {
-                top.linkTo(parent.top)
+        Text(
+            text = "Texto 1",
+            modifier = Modifier.constrainAs(t1Ref) {
+                top.linkTo(parent.top, 16.dp)
+                start.linkTo(parent.start)
             }
-        ) { Text("Botón 1") }
-
-        Button(
-            onClick = { Toast.makeText(context, "2", Toast.LENGTH_SHORT).show() },
-            modifier = Modifier.constrainAs(buttonBRef) {
-                top.linkTo(parent.top)
-            }
-        ) { Text("Botón 2") }
-
-        Button(
-            onClick = { Toast.makeText(context, "3", Toast.LENGTH_SHORT).show() },
-            modifier = Modifier.constrainAs(buttonCRef) {
-                top.linkTo(parent.top)
-            }
-        ) { Text("Botón 3") }
-
-        createHorizontalChain(
-            buttonARef, buttonBRef, buttonCRef,
-            chainStyle = chainStyle
         )
+        Text(
+            text = "Texto 2",
+            modifier = Modifier.constrainAs(t2Ref) {
+                top.linkTo(parent.top, 16.dp)
+            }
+        )
+        Text(
+            text = "Texto 3",
+            modifier = Modifier.constrainAs(t3Ref) {
+                top.linkTo(parent.top, 16.dp)
+                end.linkTo(parent.end)
+            }
+        )
+
+        createHorizontalChain(t1Ref, t2Ref, t3Ref, chainStyle = chainStyle)
+
+        HorizontalDivider(
+            Modifier.constrainAs(dividerRef) {
+                top.linkTo(t1Ref.bottom, 16.dp)
+                start.linkTo(parent.start)
+                end.linkTo(parent.end)
+                width = Dimension.fillToConstraints
+            }
+        )
+
+        Button(
+            onClick = {
+                Toast.makeText(context, "Spread", Toast.LENGTH_SHORT).show()
+                chainStyle = ChainStyle.Spread
+            },
+            modifier = Modifier.constrainAs(b1Ref) {
+                bottom.linkTo(parent.bottom, 16.dp)
+            }
+        ) { Text("Spread") }
+
+        Button(
+            onClick = {
+                Toast.makeText(context, "SpreadInside", Toast.LENGTH_SHORT).show()
+                chainStyle = ChainStyle.SpreadInside
+            },
+            modifier = Modifier.constrainAs(b2Ref) {
+                bottom.linkTo(parent.bottom, 16.dp)
+            }
+        ) { Text("SpreadInside") }
+
+        Button(
+            onClick = {
+                Toast.makeText(context, "Packed", Toast.LENGTH_SHORT).show()
+                chainStyle = ChainStyle.Packed
+            },
+            modifier = Modifier.constrainAs(b3Ref) {
+                bottom.linkTo(parent.bottom, 16.dp)
+            }
+        ) { Text("Packed") }
+
+        createHorizontalChain(b1Ref, b2Ref, b3Ref, chainStyle = ChainStyle.SpreadInside)
     }
-
 }
 
 @Preview
 @Composable
-fun PreviewSpread() {
-    AccionesPrincipales(Modifier, ChainStyle.Spread)
+fun PreviewAccionesPrincipales() {
+    AccionesPrincipales()
 }
-
-@Preview
-@Composable
-fun PreviewSpreadInside() {
-    AccionesPrincipales(Modifier, ChainStyle.SpreadInside)
-}
-
-@Preview
-@Composable
-fun PreviewPacked() {
-    AccionesPrincipales(Modifier, ChainStyle.Packed)
-} 

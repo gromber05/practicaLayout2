@@ -53,7 +53,7 @@ fun AppPrincipal() {
     Scaffold(
         topBar = {
             TopAppBar(title = {
-                Text("Practica Layout2 - Gonzalo Romero Bernal")
+                Text("PracticaEstados - Gonzalo Romero Bernal")
             })
 
         },
@@ -101,21 +101,7 @@ fun AppPrincipal() {
         Box(Modifier.padding(innerPadding)) {
             when (pantallaActual) {
                 0 -> FichaProducto()
-                1 -> {
-                    Column(
-                        modifier = Modifier.fillMaxSize().padding(10.dp)
-                    ) {
-                        Text(text = "ChainStyle.Spread", fontSize = 16.sp)
-                        AccionesPrincipales(Modifier, ChainStyle.Spread)
-                        Spacer(Modifier.padding(10.dp))
-                        Text(text = "ChainStyle.SpreadInside", fontSize = 16.sp)
-                        AccionesPrincipales(Modifier, ChainStyle.SpreadInside)
-                        Spacer(Modifier.padding(10.dp))
-                        Text(text = "ChainStyle.Packed", fontSize = 16.sp)
-                        AccionesPrincipales(Modifier, ChainStyle.Packed)
-                    }
-
-                }
+                1 -> AccionesPrincipales()
                 2 -> ColoresEstado()
                 3 -> ContadorDoble()
                 4 -> InterruptorVisibilidad()
