@@ -23,13 +23,13 @@
 
 ---
 
-## Ejercicio 1 — Ficha de product
+## Ejercicio 1 — Ficha de producto
 **Explicación:** Lo que se ha pedido en este ejercicio es una foto de perfil con texto superpuesto, lo que he hecho ha sido un box, introduciendole una foto, con otra caja en la que se incluyan los textos de la tarjeta de perfil.
 
 **Foto:**
 
 **Código:**
-
+https://github.com/gromber05/practicaLayout2/blob/0027e279e7cace8fc7c202719c8e84ce04b80fb2/app/src/main/java/com/gromber05/practicalayout2/Ejercicios/Ejercicio01FichaProducto.kt#L23-L94
 
 ---
 
@@ -40,6 +40,7 @@
 **Foto**:
 
 **Código:**
+https://github.com/gromber05/practicaLayout2/blob/0027e279e7cace8fc7c202719c8e84ce04b80fb2/app/src/main/java/com/gromber05/practicalayout2/Ejercicios/Ejercicio02AccionesPrincipales.kt#L19-L54
 
 ---
 
