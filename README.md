@@ -24,7 +24,7 @@
 ---
 
 ## Ejercicio 1 — Ficha de producto
-**Explicación:** Lo que se ha pedido en este ejercicio es una foto de perfil con texto superpuesto, lo que he hecho ha sido un box, introduciendole una foto, con otra caja en la que se incluyan los textos de la tarjeta de perfil.
+**Explicación:** He realizado una tarjeta de presentación de un producto, en la que he integrado una imagen recortada con textos superpuestos, en los que he empleado una disposición por capas mediante el uso de Box.
 
 **Foto:**
 
@@ -35,7 +35,7 @@ https://github.com/gromber05/practicaLayout2/blob/0027e279e7cace8fc7c202719c8e84
 
 ## Ejercicio 2 — Acciones principales en una barra
 
-**Explicación:** En este ejercicio, lo que he hecho ha sido crear configuraciones, metiendole entre ellas un HorizontalDivider para crear la linea que divide entre cada elemento de la lista de configuraciones. He metido un row por cada elemento en la lista, para agregarle en el inicio de esta el texto, y luego en el final el botón/switch.
+**Explicación:**  Para este ejercicio, lo que he realizado ha sido una barra de acciones que contiene tres botones que se han distribuido mediante ConstraintLayout y una cadena horizontal. Se ha pedido que se apliquen diferentes estilos de cadena entre los que se encuentran: Spread, SpredInside y Packed. Cada botón provoca que aparezca un Toast de distintas duraciones
 
 **Foto**:
 
@@ -46,10 +46,9 @@ https://github.com/gromber05/practicaLayout2/blob/0027e279e7cace8fc7c202719c8e84
 
 ## Ejercicio 3 — Cambiando colores con estado
 
-**Explicación:** Para crear la lista y mostrar los productos, lo que he hecho ha sido aplicarles un valor a las cadenas de texto que tengo en la lista, así, puedo usar el painterResource para pintar las imagenes guardadas en los valores de la lista.
+**Explicación:** En este ejercicio se ha implementado un ejemplo de gestión de estado en Compose, donde mostramos un cubo en pantalla que cambia de color aleatoriamente al pulsar un botón. Se usa rememberSaveable junto con ColorSaver para poder almacenar el valor de color actual en conjunto con su nombre incluso tras recomponer el contenido. 
 
 **Foto:**
-
 
 **Código:**
 https://github.com/gromber05/practicaLayout2/blob/0027e279e7cace8fc7c202719c8e84ce04b80fb2/app/src/main/java/com/gromber05/practicalayout2/Ejercicios/Ejercicio03ColoresEstado.kt#L25-L62
@@ -58,10 +57,9 @@ https://github.com/gromber05/practicaLayout2/blob/0027e279e7cace8fc7c202719c8e84
 
 ## Ejercicio 4 — Contador doble
 
-**Explicación:** En este código, lo que he usado han sido los espaciadores 'Spacer' que me permiten crear espacios dentro de mi contenido. Para pegar el botón al fondo, lo que he hecho ha sido aplicarle "peso" al espaciador.
+**Explicación:** En este ejercicio, hemos comprobado como funciona el estado y la persistencia de rememberSaveable en JetpackCompose. Esta pantalla muestra dos botones, uno para sumar y otro para restar a una variable que funciona de contador. También hemos puesto una regla al contador que hace que no recoja numeros negativos.
 
 **Foto:**
-
 
 **Código:**
 https://github.com/gromber05/practicaLayout2/blob/0027e279e7cace8fc7c202719c8e84ce04b80fb2/app/src/main/java/com/gromber05/practicalayout2/Ejercicios/Ejercicio04ContadorDoble.kt#L20-L39
@@ -70,10 +68,9 @@ https://github.com/gromber05/practicaLayout2/blob/0027e279e7cace8fc7c202719c8e84
 
 ## Ejercicio 5 — Interruptor de visibilidad
 
-**Explicación:** Para este ejercicio, se han pedido varias cajas de distintos colores y tamaños en distintas configuraciones, lo que he hecho para poder colocar las cajas en distintos sitios es usar el weight, una propiedad del modifier que me permite mover las cajas a mi antojo y luego las he coloreado jugando con el fondo.
+**Explicación:** En este ejercicio, he desarollado un componente interactivo que permite ocultar o mostrar un texto presionando un botón. He creado una variable de estado con rememberSaveable para garantizar que el valor del estado no se pierda despues de una recomposición.
 
 **Foto:**
-
 
 **Código:**
 https://github.com/gromber05/practicaLayout2/blob/0027e279e7cace8fc7c202719c8e84ce04b80fb2/app/src/main/java/com/gromber05/practicalayout2/Ejercicios/Ejercicio05Visibilidad.kt#L19-L36
@@ -82,7 +79,9 @@ https://github.com/gromber05/practicaLayout2/blob/0027e279e7cace8fc7c202719c8e84
 
 ## Ejercicio 6 — Tarjeta de evento interactiva
 
-**Explicación:** Para crear este código, se requiere el uso de un `ConstraintLayout`. Se ha pedido la creación de una tarjeta de perfil, para ello, se ha empleado una Card, en la que dentro se ha implementado el ConstraintLayout, luego dentro, se han establecido las referencias de posición de los distintos elementos.
+**Explicación:** En este ejercicio se ha pedido una tarjeta interactiva en la que los componentes esten divididos en diferentes archivos. En el primero es simplemente un punto de acceso al ejercicio. En el archivo EventActions se define la fila de acciones que podemos ejecutar dentro de la tarjeta interactiva, como lo son Interesa, Compartir y Guardar.
+Estoy usando ConstraintLayout con una cadena horizontal SpreadInside, de esta manera, puedo distribuir los tres textos con espacio suficiente en los extremos.
+EventCard es el componente principal y el interactivo. En este se muestra una imagen mediante el método AsyncImage de Coil y posee titulos y subtitulos superpuestos con fondos semitransparentes para que sea legible. Debajo, la descripción se puede expandir o contraer con el texto "Mostrar más/menos" y luego se inserta la fila con las interacciones del archivo EventActions. Todo el diseño se organiza con ConstraintLayout usando barreras y restricciones.
 
 **Foto:**
 
@@ -90,3 +89,5 @@ https://github.com/gromber05/practicaLayout2/blob/0027e279e7cace8fc7c202719c8e84
 https://github.com/gromber05/practicaLayout2/blob/0027e279e7cace8fc7c202719c8e84ce04b80fb2/app/src/main/java/com/gromber05/practicalayout2/Ejercicios/EjercicioExtra/Main.kt#L12-L25
 
 https://github.com/gromber05/practicaLayout2/blob/0027e279e7cace8fc7c202719c8e84ce04b80fb2/app/src/main/java/com/gromber05/practicalayout2/Ejercicios/EjercicioExtra/components/EventCard.kt#L26-L208
+
+https://github.com/gromber05/practicaLayout2/blob/3782c11c895cc36ae18feb5deff0180c5d90f4a0/app/src/main/java/com/gromber05/practicalayout2/Ejercicios/EjercicioExtra/components/EventActions.kt#L15-L71

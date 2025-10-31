@@ -28,6 +28,7 @@ import androidx.constraintlayout.compose.ChainStyle
 import com.gromber05.practicalayout2.Ejercicios.AccionesPrincipales
 import com.gromber05.practicalayout2.Ejercicios.ColoresEstado
 import com.gromber05.practicalayout2.Ejercicios.ContadorDoble
+import com.gromber05.practicalayout2.Ejercicios.EjercicioExtra.MainEjercicioExtra
 import com.gromber05.practicalayout2.Ejercicios.FichaProducto
 import com.gromber05.practicalayout2.Ejercicios.InterruptorVisibilidad
 import com.gromber05.practicalayout2.ui.theme.PracticaLayout2Theme
@@ -88,6 +89,12 @@ fun AppPrincipal() {
                     label = { Text("Ej5") },
                     icon = { Text("5") }
                 )
+                NavigationBarItem(
+                    selected = pantallaActual == 5,
+                    onClick = { pantallaActual = 5 },
+                    label = { Text("Ej6") },
+                    icon = { Text("6") }
+                )
             }
         }
     ) { innerPadding ->
@@ -112,6 +119,7 @@ fun AppPrincipal() {
                 2 -> ColoresEstado()
                 3 -> ContadorDoble()
                 4 -> InterruptorVisibilidad()
+                6 -> MainEjercicioExtra()
             }
         }
     }
